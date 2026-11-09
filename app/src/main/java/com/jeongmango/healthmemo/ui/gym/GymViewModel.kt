@@ -4,13 +4,16 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.jeongmango.healthmemo.data.Exercise
 import com.jeongmango.healthmemo.data.WorkoutRepository
+import dagger.hilt.android.lifecycle.HiltViewModel
+import jakarta.inject.Inject
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
 
-class GymViewModel(
+@HiltViewModel
+class GymViewModel @Inject constructor(
     private val repository: WorkoutRepository,
 ) : ViewModel() {
 

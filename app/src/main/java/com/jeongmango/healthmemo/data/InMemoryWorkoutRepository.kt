@@ -1,11 +1,14 @@
 package com.jeongmango.healthmemo.data
 
+import javax.inject.Inject
+import javax.inject.Singleton
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 
-class InMemoryWorkoutRepository : WorkoutRepository {
+@Singleton
+class InMemoryWorkoutRepository @Inject constructor(): WorkoutRepository {
 
     private val exercises = MutableStateFlow(
         listOf(
