@@ -49,7 +49,6 @@ import java.util.Locale
 fun GymScreen(
     modifier: Modifier = Modifier,
     viewModel: GymViewModel = hiltViewModel(),
-
 ) {
     val uiState by viewModel.uiState.collectAsStateWithLifecycle()
 
