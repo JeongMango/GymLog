@@ -5,7 +5,7 @@ import androidx.lifecycle.viewModelScope
 import com.jeongmango.healthmemo.data.Exercise
 import com.jeongmango.healthmemo.data.WorkoutRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
-import jakarta.inject.Inject
+import javax.inject.Inject
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.map
